@@ -29,7 +29,10 @@ represents it.<br><br>
 
 By default there are only two hand gestures (a peace sign and a thumbs up
 rotated 90 degrees to the left). I have them bound to press the mouse and press
-the tab button respectively.
+the tab button respectively.<br><br>
+
+If you would like to change which device it uses you can consider crying in a
+corner or maybe unplugging some web cams.
 
 
 ## How does it actually work?
@@ -41,3 +44,9 @@ distance is taken between the current re-centered hand and the re-centred hand
 stored in `hand_gestures`. If the distance is less than the tolerance, and its
 been at least 2 seconds since we last saw this gesture, we trigger the relevant
 function in `gesture_commands`.
+
+## Installation Info
+This was built and tested with `OpenCV=4.10.0` and `mediapip=0.10.14` so those
+are probably the best versions to use. If `venv` is a hassle then I'll put a
+compile version (for Linux) in the releases section- but since its configured
+via source files it'd be hard to customize the gestures.
