@@ -1,8 +1,10 @@
-import cv2
-import mediapipe as mp
 import time
 import numpy as np
 import os
+
+import cv2
+import mediapipe as mp
+
 
 gesture_commands = {
     "peace": lambda : os.system("xdotool key space"),
@@ -14,6 +16,8 @@ hand_gestures = {
     "peace" : [[0, 181, 383], [1, 224, 378], [2, 243, 339], [3, 219, 299], [4, 191, 266], [5, 255, 275], [6, 283, 216], [7, 299, 181], [8, 312, 151], [9, 216, 266], [10, 227, 198], [11, 235, 157], [12, 241, 121], [13, 180, 276], [14, 169, 230], [15, 179, 268], [16, 188, 297], [17, 149, 301], [18, 146, 279], [19, 163, 310], [20, 177, 335]]
 }
 
+# Dont fuck with these I use them to stop the program
+# from spamming the same command every frame
 _p_gesture = None
 _tlo_gesture = 100
 
