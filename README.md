@@ -14,3 +14,30 @@ being able to speak or hear other people speak.<br><br>
 
 Yet somehow, our unjust society has allowed my plight to continue unaided. Until
 now. 
+
+
+## Configuration
+At the top of the file there are two dictionaries `gesture_commands` and
+`hand_gestures`. The first maps the name of a gesture (a simple string) to a
+function it should run. In my case, they are all `lambda` wrapped calls to
+`xdotool` commands.<br><br>
+The second dictionary is `hand_gestures` which maps the name of a gesture to a
+21x3 dimensional array specifying the location of each hand bone. That is of
+course very annoying to specify, so you can launch the program, make the
+appropriate gesture, and press the space bar to print out the vector that
+represents it.<br><br>
+
+By default there are only two hand gestures (a peace sign and a thumbs up
+rotated 90 degrees to the left). I have them bound to press the mouse and press
+the tab button respectively.
+
+
+## How does it actually work?
+The ~~stolen~~ forked code uses OpenCV to detect the location of each hand
+segment. Each segment contains a tuple (x, y, z) specifying its supposed
+location. Those locations are in cartesian coordinates relative to the camera,
+so they are first re-centered to the middle of the hand. Then the euclidean
+distance is taken between the current re-centered hand and the re-centred hand
+stored in `hand_gestures`. If the distance is less than the tolerance, and its
+been at least 2 seconds since we last saw this gesture, we trigger the relevant
+function in `gesture_commands`.
