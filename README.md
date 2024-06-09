@@ -6,9 +6,7 @@ and/or need ASL but I'm here to solve a more pressing and important matter.<br><
 
 Sometimes when I'm eating food and watching cartoons I can't hit the space bar
 without getting my keyboard dirty. (see *figure 1* below)<br><br>
-<center>
 ![img](/imgs/figure1.png)
-</center>
 
 I think it should be obvious to anyone that my problems are much more severe and
 deserve way more attention than people with small inconveniences such as not
