@@ -15,8 +15,6 @@ being able to speak or hear other people speak.<br><br>
 Yet somehow, our unjust society has allowed my plight to continue unaided. Until
 now. 
 
-![img](/imgs/VideoHandControls.webm)
-
 
 ## Configuration
 At the top of the file there are two dictionaries `gesture_commands` and
