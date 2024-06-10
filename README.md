@@ -27,9 +27,13 @@ course very annoying to specify, so you can launch the program, make the
 appropriate gesture, and press the space bar to print out the vector that
 represents it.<br><br>
 
-By default there are only two hand gestures (a peace sign and a thumbs up
-rotated 90 degrees to the left). I have them bound to press the mouse and press
-the tab button respectively.<br><br>
+By default there are 4 gestures registered, and 3 gestures bound to run xdotool
+coomands. Making a thumb-up and then turning your hand so the thumb points left
+will press `Tab`, turning it down will press `Mouse 1` and turning it up will
+press `Return`.<br><br>
+Before performing any gesture, it is best to leave your hand open, like you're
+waving to the camera. That helps get the computer's attention because sometimes he
+is sleeping.<br><br>
 
 If you would like to change which device it uses you can consider crying in a
 corner or maybe unplugging some web cams.
@@ -47,6 +51,6 @@ function in `gesture_commands`.
 
 ## Installation Info
 This was built and tested with `OpenCV=4.10.0` and `mediapip=0.10.14` so those
-are probably the best versions to use. If `venv` is a hassle then I'll put a
+are probably the best versions to use. ~~If `venv` is a hassle then I'll put a
 compile version (for Linux) in the releases section- but since its configured
-via source files it'd be hard to customize the gestures.
+via source files it'd be hard to customize the gestures.~~ nvm I'm lazy.
